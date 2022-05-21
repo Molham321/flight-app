@@ -4,6 +4,7 @@
   <label>From:</label>
   <input [(ngModel)]="from" class="form-control">
 </div>
+
 <div class="form-group">
   <label>To:</label>
   <input [(ngModel)]="to" class="form-control">
@@ -13,6 +14,20 @@
   <button class="btn btn-default" (click)="search()" [disabled]="!from || !to">
     Search
   </button>
+</div>
+
+<div class="row">
+  <div 
+  *ngFor="let f of flights"
+  class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+  
+    <app-flight-card 
+    [item]="f"
+    [selected]="basket[f.id]"
+    (selectedChange)="basket[f.id] = $event">
+    </app-flight-card>
+
+  </div>
 </div>
 
 <table class="table table-striped">

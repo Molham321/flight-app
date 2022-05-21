@@ -10,7 +10,11 @@
       <div class="content">
         
         <app-flight-search></app-flight-search>
-        <!-- <h1>{{title}}</h1> -->
+        <!-- <div *ngFor="let f of flights">
+          <app-flight-card [item]="f"
+          [selected]="basket[f.id]"
+          (selectedChange)="basket[f.id] = $event">
+        </div> -->
           
       </div>
   </div>

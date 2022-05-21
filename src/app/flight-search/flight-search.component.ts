@@ -14,6 +14,11 @@ export class FlightSearchComponent implements OnInit {
   flights: Array<Flight> = [];
   selectedFlight: Flight | null = null;
 
+  basket: {[key:number]:boolean} = {
+    3: true,
+    5: true
+  };
+
   constructor(private http: HttpClient) { 
   }
 
@@ -21,7 +26,6 @@ export class FlightSearchComponent implements OnInit {
   }
 
   search():void {
-    // todo
      const url = 'http://demo.ANGULARarchitects.io/api/flight';
 
      const headers = new HttpHeaders()
