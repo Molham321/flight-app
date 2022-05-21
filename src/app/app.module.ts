@@ -8,6 +8,11 @@ import { FlightSearchComponent } from './flight-search/flight-search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FlightCardComponent } from './flight-card/flight-card.component';
+import { HomeComponent } from './home/home.component';
+import { PassengerSearchComponent } from './passenger-search/passenger-search.component';
+import { FlightEditComponent } from './flight-edit/flight-edit.component';
+import { AboutComponent } from './about/about.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
    imports: [
@@ -20,7 +25,12 @@ import { FlightCardComponent } from './flight-card/flight-card.component';
       SidebarComponent,
       NavbarComponent,
       FlightSearchComponent,
-      FlightCardComponent
+      FlightCardComponent,
+      HomeComponent,
+      PassengerSearchComponent,
+      FlightEditComponent,
+      AboutComponent,
+      NotFoundComponent
    ],
    providers: [],
    bootstrap: [
