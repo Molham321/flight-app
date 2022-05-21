@@ -1,3 +1,4 @@
+import { FlightService } from './../flight.service';
 import { Flight } from './../flight';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
@@ -19,27 +20,22 @@ export class FlightSearchComponent implements OnInit {
     5: true
   };
 
-  constructor(private http: HttpClient) { 
+  constructor(private flightService: FlightService) { 
   }
 
   ngOnInit(): void {
   }
 
   search():void {
-     const url = 'http://demo.ANGULARarchitects.io/api/flight';
 
-     const headers = new HttpHeaders()
-      .set('Accept', 'application/json');
-
-      const params = new HttpParams()
-      .set('from', this.from)
-      .set('to', this.to)
-
-      this.http.get<Flight[]>(url,{headers,params}).subscribe({
-        next: (flights) => {
-          this.flights = flights;
-        }
-      })
+    this.flightService.find(this.from,this.to).subscribe({
+      next: (flights) => {
+        this.flights = flights;
+      },
+      error:(err) => {
+        console.debug('Error', err);
+      }
+    });
   }
 
   select(f:Flight):void {
