@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 
 import { Routes } from "@angular/router"
 
-export const APP_ROUTED: Routes = [
+export const APP_ROUTES: Routes = [
   {
     path: '',
     redirectTo: 'home',

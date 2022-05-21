@@ -13,12 +13,15 @@ import { PassengerSearchComponent } from './passenger-search/passenger-search.co
 import { FlightEditComponent } from './flight-edit/flight-edit.component';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { RouterModule } from '@angular/router';
+import { APP_ROUTES } from './app.routes';
 
 @NgModule({
    imports: [
      FormsModule,
      HttpClientModule,
-     BrowserModule
+     BrowserModule,
+     RouterModule.forRoot(APP_ROUTES)
    ],
    declarations: [
       AppComponent,
