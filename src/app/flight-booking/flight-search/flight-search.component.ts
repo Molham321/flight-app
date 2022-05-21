@@ -1,5 +1,5 @@
-import { FlightService } from './../flight.service';
-import { Flight } from './../flight';
+import { FlightService } from '../../flight.service';
+import { Flight } from '../../flight';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 

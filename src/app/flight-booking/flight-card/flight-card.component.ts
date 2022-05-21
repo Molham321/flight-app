@@ -1,4 +1,4 @@
-import { Flight } from './../flight';
+import { Flight } from '../../flight';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
