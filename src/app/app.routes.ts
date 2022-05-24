@@ -1,3 +1,4 @@
+import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AboutComponent } from './about/about.component';
 import { PassengerSearchComponent } from './flight-booking/passenger-search/passenger-search.component';
@@ -31,7 +32,11 @@ export const APP_ROUTES: Routes = [
   {
     path: 'about',
     component: AboutComponent
-  }, 
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
   {
     path: '**',
     component: NotFoundComponent

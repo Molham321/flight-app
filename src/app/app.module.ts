@@ -15,6 +15,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
 import { FlightBookingModule } from './flight-booking/flight-booking.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
    imports: [
@@ -30,7 +31,8 @@ import { FlightBookingModule } from './flight-booking/flight-booking.module';
       NavbarComponent,
       HomeComponent,
       AboutComponent,
-      NotFoundComponent
+      NotFoundComponent,
+      LoginComponent
    ],
    providers: [],
    bootstrap: [
